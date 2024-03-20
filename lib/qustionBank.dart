@@ -1,5 +1,5 @@
 class Data1 {
-  List<Map> quizQuestions = [
+  List<Map> keralaquizQuestions = [
     {
       'question': '1. What is the capital city of Kerala?',
       'answers': ['Thiruvananthapuram', 'Kochi', 'Kozhikode', 'Thrissur'],
@@ -63,8 +63,8 @@ class Data1 {
     },
   ];
 }
-class Data2{
-  List<Map> QuizQuestions = [
+class Data2 {
+  List<Map> indianQuizQuestions = [
     {
       'question': '1. What is the capital city of India?',
       'answers': ['New Delhi', 'Mumbai', 'Kolkata', 'Chennai'],
@@ -116,60 +116,227 @@ class Data2{
       'correctAnswerIndex': 0, // Punjab
     },
   ];
-
 }
-class Data3{
-  List<Map> QuizQuestions = [
+
+class Data3 {
+  List<Map> sportsQuizQuestions = [
     {
-      'question': '1. In which sport does a player try to hit a shuttlecock over a net using a racket?',
+      'question': '1. In which sport does a player try to hit a\nshuttlecock over a net using a racket?',
       'answers': ['Badminton', 'Tennis', 'Table Tennis', 'Squash'],
       'correctAnswerIndex': 0, // Badminton
     },
     {
-      'question': '2. How many players are there in a rugby league team?',
+      'question': '2. How many players are there in a rugby league\nteam?',
       'answers': ['13', '15', '11', '9'],
       'correctAnswerIndex': 0, // 13
     },
     {
-      'question': '3. Which country won the FIFA World Cup in 2018?',
+      'question': '3. Which country won the FIFA World Cup in\n2018?',
       'answers': ['France', 'Brazil', 'Germany', 'Spain'],
       'correctAnswerIndex': 0, // France
     },
     {
-      'question': '4. What is the maximum number of clubs a golfer is allowed to carry in their bag during a round of golf?',
+      'question': '4. What is the maximum number of clubs a golfer\nis allowed to carry in their bag during a round of golf?',
       'answers': ['14', '10', '12', '16'],
       'correctAnswerIndex': 0, // 14
     },
     {
-      'question': '5. Who is the all-time leading scorer in NBA history?',
+      'question': '5. Who is the all-time leading scorer in NBA\nhistory?',
       'answers': ['Kareem Abdul-Jabbar', 'LeBron James', 'Michael Jordan', 'Kobe Bryant'],
       'correctAnswerIndex': 0, // Kareem Abdul-Jabbar
     },
     {
-      'question': '6. What is the term used in cricket to describe the act of a bowler dismissing a batsman on the first ball of the match?',
+      'question': '6. What is the term used in cricket to describe\nthe act of a bowler dismissing a batsman on the first ball of the match?',
       'answers': ['Golden Duck', 'Silver Duck', 'Bronze Duck', 'Platinum Duck'],
       'correctAnswerIndex': 0, // Golden Duck
     },
     {
-      'question': '7. In which Olympic sport would you perform a "pommel horse" routine?',
+      'question': '7. In which Olympic sport would you perform a\n"pommel horse" routine?',
       'answers': ['Gymnastics', 'Swimming', 'Diving', 'Track and Field'],
       'correctAnswerIndex': 0, // Gymnastics
     },
     {
-      'question': '8. Which tennis player has won the most Grand Slam singles titles?',
+      'question': '8. Which tennis player has won the most Grand Slam\nsingles titles?',
       'answers': ['Margaret Court', 'Serena Williams', 'Steffi Graf', 'Martina Navratilova'],
       'correctAnswerIndex': 0, // Margaret Court
     },
     {
-      'question': '9. How many points is a touchdown worth in American football?',
+      'question': '9. How many points is a touchdown worth in\nAmerican football?',
       'answers': ['6', '3', '2', '1'],
       'correctAnswerIndex': 0, // 6
     },
     {
-      'question': '10. Which city hosted the 2016 Summer Olympics?',
+      'question': '10. Which city hosted the 2016 Summer\nOlympics?',
       'answers': ['Rio de Janeiro', 'Tokyo', 'London', 'Beijing'],
       'correctAnswerIndex': 0, // Rio de Janeiro
     },
   ];
-
 }
+
+class Data4 {
+  List<Map> birdQuizQuestions = [
+    {
+      'question': '1. Which bird is known for its ability to mimic\nhuman speech?',
+      'answers': ['Parrot', 'Eagle', 'Owl', 'Penguin'],
+      'correctAnswerIndex': 0, // Parrot
+    },
+    {
+      'question': '2. Which bird is the fastest animal in the\nworld?',
+      'answers': ['Peregrine Falcon', 'Emperor Penguin', 'Albatross', 'Hummingbird'],
+      'correctAnswerIndex': 0, // Peregrine Falcon
+    },
+    {
+      'question': '3. Which bird is the national symbol of the\nUnited States?',
+      'answers': ['Bald Eagle', 'Turkey', 'Blue Jay', 'Robin'],
+      'correctAnswerIndex': 0, // Bald Eagle
+    },
+    {
+      'question': '4. Which bird is known for its long migration\njourney, often spanning continents?',
+      'answers': ['Arctic Tern', 'Flamingo', 'Toucan', 'Kiwi'],
+      'correctAnswerIndex': 0, // Arctic Tern
+    },
+    {
+      'question': '5. Which bird is the largest living bird\nspecies?',
+      'answers': ['Ostrich', 'Cassowary', 'Emu', 'Condor'],
+      'correctAnswerIndex': 0, // Ostrich
+    },
+    {
+      'question': '6. Which bird species is known for its\ndistinctive courtship dance?',
+      'answers': ['Bird of Paradise', 'Peacock', 'Puffin', 'Crane'],
+      'correctAnswerIndex': 0, // Bird of Paradise
+    },
+    {
+      'question': '7. Which bird is famous for its ability to dive\nunderwater to catch fish?',
+      'answers': ['Penguin', 'Seagull', 'Heron', 'Kingfisher'],
+      'correctAnswerIndex': 3, // Kingfisher
+    },
+    {
+      'question': '8. Which bird is the national bird of India?',
+      'answers': ['Peacock', 'Crow', 'Sparrow', 'Kite'],
+      'correctAnswerIndex': 0, // Peacock
+    },
+    {
+      'question': '9. Which bird is known for its ability to build\nintricate nests?',
+      'answers': ['Weaverbird', 'Swan', 'Dove', 'Sparrow'],
+      'correctAnswerIndex': 0, // Weaverbird
+    },
+    {
+      'question': '10. Which bird is often associated with wisdom\nin many cultures?',
+      'answers': ['Owl', 'Eagle', 'Hawk', 'Vulture'],
+      'correctAnswerIndex': 0, // Owl
+    },
+  ];
+}
+
+
+class Data5 {
+  List<Map> animalQuizQuestions = [
+    {
+      'question': '1. Which animal is known as the "king of the\njungle"?',
+      'answers': ['Lion', 'Tiger', 'Leopard', 'Cheetah'],
+      'correctAnswerIndex': 0, // Lion
+    },
+    {
+      'question': '2. Which animal is the largest land mammal?',
+      'answers': ['Elephant', 'Giraffe', 'Hippo', 'Rhino'],
+      'correctAnswerIndex': 0, // Elephant
+    },
+    {
+      'question': '3. Which animal has the longest\nlifespan?',
+      'answers': ['Giant Tortoise', 'Bowhead Whale', 'African Elephant', 'Red Sea Urchin'],
+      'correctAnswerIndex': 0, // Giant Tortoise
+    },
+    {
+      'question': '4. Which animal is known for its ability to\nchange color?',
+      'answers': ['Chameleon', 'Octopus', 'Cuttlefish', 'Mimic Octopus'],
+      'correctAnswerIndex': 0, // Chameleon
+    },
+    {
+      'question': '5. Which animal is considered the fastest\nland animal?',
+      'answers': ['Cheetah', 'Pronghorn Antelope', 'Horse', 'Greyhound'],
+      'correctAnswerIndex': 0, // Cheetah
+    },
+    {
+      'question': '6. Which animal is known for its long neck?',
+      'answers': ['Giraffe', 'Kangaroo', 'Ostrich', 'Emu'],
+      'correctAnswerIndex': 0, // Giraffe
+    },
+    {
+      'question': '7. Which animal is capable of regenerating\nlost limbs?',
+      'answers': ['Starfish', 'Salamander', 'Axolotl', 'Lizard'],
+      'correctAnswerIndex': 2, // Axolotl
+    },
+    {
+      'question': '8. Which animal is known for its hibernation\nduring winter?',
+      'answers': ['Bear', 'Squirrel', 'Bat', 'Groundhog'],
+      'correctAnswerIndex': 3, // Groundhog
+    },
+    {
+      'question': '9. Which animal has the largest brain relative\nto its body size?',
+      'answers': ['Sperm Whale', 'Elephant', 'Dolphin', 'Human'],
+      'correctAnswerIndex': 2, // Dolphin
+    },
+    {
+      'question': '10. Which animal is known as the "ship of the\ndesert"?',
+      'answers': ['Camel', 'Horse', 'Donkey', 'Llama'],
+      'correctAnswerIndex': 0, // Camel
+    },
+  ];
+}
+class Data6 {
+  List<Map> carQuizQuestions = [
+    {
+      'question': '1. Which car manufacturer produces the\nMustang?',
+      'answers': ['Ford', 'Chevrolet', 'Toyota', 'Honda'],
+      'correctAnswerIndex': 0, // Ford
+    },
+    {
+      'question': '2. What does SUV stand for?',
+      'answers': ['Sports Utility Vehicle', 'Super Utility Vehicle', 'Special Utility Vehicle', 'Standard Utility Vehicle'],
+      'correctAnswerIndex': 0, // Sports Utility Vehicle
+    },
+    {
+      'question': '3. What car is often referred to as the\n"people\'s car"?',
+      'answers': ['Volkswagen Beetle', 'Toyota Corolla', 'Honda Civic', 'Ford Focus'],
+      'correctAnswerIndex': 0, // Volkswagen Beetle
+    },
+    {
+      'question': '4. Which car brand has a logo featuring a\nprancing horse?',
+      'answers': ['Ferrari', 'Lamborghini', 'Porsche', 'Bugatti'],
+      'correctAnswerIndex': 0, // Ferrari
+    },
+    {
+      'question': '5. Which country is famous for producing the\nMini Cooper?',
+      'answers': ['United Kingdom', 'Germany', 'Italy', 'France'],
+      'correctAnswerIndex': 0, // United Kingdom
+    },
+    {
+      'question': '6. What car model is often associated with the\nterm "muscle car"?',
+      'answers': ['Dodge Challenger', 'Toyota Camry', 'Honda Accord', 'Nissan Altima'],
+      'correctAnswerIndex': 0, // Dodge Challenger
+    },
+    {
+      'question': '7. Which car company produces the Prius, known\nfor its hybrid technology?',
+      'answers': ['Toyota', 'Honda', 'Ford', 'Chevrolet'],
+      'correctAnswerIndex': 0, // Toyota
+    },
+    {
+      'question': '8. What is the top speed of the Bugatti Veyron\nSuper Sport, the fastest production car in the world?',
+      'answers': ['267 mph', '220 mph', '300 mph', '350 mph'],
+      'correctAnswerIndex': 0, // 267 mph
+    },
+    {
+      'question': '9. Which car brand is known for its iconic 911\nmodel?',
+      'answers': ['Porsche', 'Ferrari', 'Lamborghini', 'Maserati'],
+      'correctAnswerIndex': 0, // Porsche
+    },
+    {
+      'question': '10. What is the best-selling electric car model\nof all time?',
+      'answers': ['Tesla Model 3', 'Nissan Leaf', 'Chevrolet Bolt', 'BMW i3'],
+      'correctAnswerIndex': 1, // Nissan Leaf
+    },
+  ];
+}
+
+
+

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:quizz/qustionBank.dart';
+import 'OptionalPage.dart';
 import 'button.dart';
-import 'mainScreen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required this.optional});
+
+  final int optional;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -14,6 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Data1 data1 = Data1();
   Data2 data2 = Data2();
   Data3 data3 = Data3();
+  Data4 data4 = Data4();
+  Data5 data5 = Data5();
+  Data6 data6 = Data6();
 
   submit() {
     flag++;
@@ -21,11 +26,11 @@ class _HomeScreenState extends State<HomeScreen> {
     isClickable = true;
     selectedIndex = null;
     clr = Colors.white;
-    if (flag == data1.quizQuestions.length) {
+    if (flag == data1.keralaquizQuestions.length) {
       showDialog(
         barrierDismissible: false,
         context: context,
-        builder: (context) {git add
+        builder: (context) {
           return AlertDialog(
             title:
                 Text(" 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉\nyour Score is $mark"),
@@ -38,25 +43,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   InkWell(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const MainScreen(),
+                          builder: (context) => const Option(),
                         ));
                       },
                       child: const Button(text: "Home")),
-                  InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
-                        ));
-                      },
-                      child: const Button(text: "Restart")),
+                  // InkWell(
+                  //     onTap: () {
+                  //       Navigator.of(context).push(MaterialPageRoute(
+                  //         builder: (context) => const HomeScreen(),
+                  //       ));
+                  //     },
+                  //     child: const Button(text: "Restart")),
                 ],
               ),
             ),
           );
         },
       );
-      flag = data1.quizQuestions.length - 1;
-      fla = data1.quizQuestions.length;
+      flag = data1.keralaquizQuestions.length - 1;
+      fla = data1.keralaquizQuestions.length;
     }
   }
 
@@ -68,7 +73,27 @@ class _HomeScreenState extends State<HomeScreen> {
   selectedClick(int index) {
     selectedIndex = index;
     if (isClickable == true) {
-      if (data1.quizQuestions[flag]["correctAnswerIndex"] == index) {
+      if (widget.optional == 0
+          ? data1.keralaquizQuestions[flag]["correctAnswerIndex"] == index
+          : widget.optional == 1
+              ? data2.indianQuizQuestions[flag]["correctAnswerIndex"] == index
+              : widget.optional == 2
+                  ? data3.sportsQuizQuestions[flag]["correctAnswerIndex"] ==
+                      index
+                  : widget.optional == 3
+                      ? data4.birdQuizQuestions[flag]["correctAnswerIndex"] ==
+                          index
+                      : widget.optional == 4
+                          ? data5.animalQuizQuestions[flag]
+                                  ["correctAnswerIndex"] ==
+                              index
+                          : widget.optional == 5
+                              ? data6.carQuizQuestions[flag]
+                                      ["correctAnswerIndex"] ==
+                                  index
+                              : data1.keralaquizQuestions[flag]
+                                      ["correctAnswerIndex"] ==
+                                  index) {
         clr = Colors.green;
         mark++;
       } else {
@@ -117,20 +142,33 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 const Divider(),
-                const SizedBox(
-                  height: 25,
-                ),
                 Row(
                   children: [
                     Text(
-                      data1.quizQuestions[flag]['question'],
+                      widget.optional == 0
+                          ? data1.keralaquizQuestions[flag]['question']
+                          : widget.optional == 1
+                              ? data2.indianQuizQuestions[flag]['question']
+                              : widget.optional == 2
+                                  ? data3.sportsQuizQuestions[flag]['question']
+                                  : widget.optional == 3
+                                      ? data4.birdQuizQuestions[flag]
+                                          ['question']
+                                      : widget.optional == 4
+                                          ? data5.animalQuizQuestions[flag]
+                                              ['question']
+                                          : widget.optional == 5
+                                              ? data6.carQuizQuestions[flag]
+                                                  ['question']
+                                              : data1.keralaquizQuestions[flag]
+                                                  ['question'],
                       style: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 40,
                 ),
                 SizedBox(
                     height: 370,
@@ -161,8 +199,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                   const SizedBox(
                                     width: 20,
                                   ),
-                                  Text(data1.quizQuestions[flag]['answers']
-                                      [index])
+                                  Text(widget.optional == 0
+                                      ? data1.keralaquizQuestions[flag]
+                                          ['answers'][index]
+                                      : widget.optional == 1
+                                          ? data2.indianQuizQuestions[flag]
+                                              ['answers'][index]
+                                          : widget.optional == 2
+                                              ? data3.sportsQuizQuestions[flag]
+                                                  ['answers'][index]
+                                              : widget.optional == 3
+                                                  ? data4.birdQuizQuestions[flag]
+                                                      ['answers'][index]
+                                                  : widget.optional == 4
+                                                      ? data5.animalQuizQuestions[flag]
+                                                          ['answers'][index]
+                                                      : widget.optional == 5
+                                                          ? data6.carQuizQuestions[flag]
+                                                              ['answers'][index]
+                                                          : data1.keralaquizQuestions[
+                                                                      flag]
+                                                                  ['answers']
+                                                              [index])
                                 ],
                               ),
                             ),
@@ -205,16 +263,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: const Button(
                       text: 'Next',
                     )),
-                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     CircleAvatar(
-                      radius: 50,
+                      radius: 40,
                       backgroundColor: Colors.white,
                       child: Column(
                         children: [
-                          const SizedBox(height: 15),
+                          const SizedBox(height: 5),
                           Text("$mark"),
                           const Divider(),
                           Text("$fla")

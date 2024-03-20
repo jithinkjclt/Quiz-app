@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'OptionalPage.dart';
 import 'homeScreen.dart';
 
 class MainScreen extends StatelessWidget {
@@ -15,18 +16,10 @@ class MainScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: InkWell(
           onTap: () {
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                duration: Duration(seconds: 1),
-                backgroundColor: Colors.transparent,
-                content: SizedBox(
-                    // width: 394,
-                    height: 900,
-                    child: Image(image: AssetImage("assets/products_01657180467.jpeg"))
-                
-                )));
+
 
             Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
+              builder: (context) => const Option()
             ));
           },
           child: const Column(
