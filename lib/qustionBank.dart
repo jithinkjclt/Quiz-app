@@ -340,3 +340,57 @@ class Data6 {
 
 
 
+class Data7 {
+  List<Map> historyQuizQuestions = [
+    {
+      'question': '1. Who was the first president of the \nUnited States?',
+      'answers': ['George Washington', 'Thomas Jefferson', 'Abraham Lincoln', 'John Adams'],
+      'correctAnswerIndex': 0, // George Washington
+    },
+    {
+      'question': '2. In which year did World War II \nend?',
+      'answers': ['1945', '1939', '1941', '1950'],
+      'correctAnswerIndex': 0, // 1945
+    },
+    {
+      'question': '3. Who wrote "The Communist \nManifesto"?',
+      'answers': ['Karl Marx and Friedrich Engels', 'Vladimir Lenin', 'Joseph Stalin', 'Leon Trotsky'],
+      'correctAnswerIndex': 0, // Karl Marx and Friedrich Engels
+    },
+    {
+      'question': '4. What event marked the beginning \nof the French Revolution?',
+      'answers': ['Storming of the Bastille', 'Execution of Louis XVI', 'Reign of Terror', 'Napoleon Bonaparte seizing power'],
+      'correctAnswerIndex': 0, // Storming of the Bastille
+    },
+    {
+      'question': '5. Who was the first emperor of \nRome?',
+      'answers': ['Augustus', 'Julius Caesar', 'Nero', 'Constantine'],
+      'correctAnswerIndex': 0, // Augustus
+    },
+    {
+      'question': '6. What year did Christopher Columbus \ndiscover America?',
+      'answers': ['1492', '1520', '1453', '1533'],
+      'correctAnswerIndex': 0, // 1492
+    },
+    {
+      'question': '7. Who was the first female Prime \nMinister of the United Kingdom?',
+      'answers': ['Margaret Thatcher', 'Theresa May', 'Queen Elizabeth II', 'Indira Gandhi'],
+      'correctAnswerIndex': 0, // Margaret Thatcher
+    },
+    {
+      'question': '8. What was the name of the first \nsuccessful manned mission to the moon?',
+      'answers': ['Apollo 11', 'Apollo 13', 'Gemini 4', 'Mercury-Redstone 3'],
+      'correctAnswerIndex': 0, // Apollo 11
+    },
+    {
+      'question': '9. Who was the founder of the Mongol \nEmpire?',
+      'answers': ['Genghis Khan', 'Kublai Khan', 'Attila the Hun', 'Timur'],
+      'correctAnswerIndex': 0, // Genghis Khan
+    },
+    {
+      'question': '10. What was the name of the treaty \nthat ended World War I?',
+      'answers': ['Treaty of Versailles', 'Treaty of Paris', 'Treaty of Trianon', 'Treaty of Brest-Litovsk'],
+      'correctAnswerIndex': 0, // Treaty of Versailles
+    },
+  ];
+}

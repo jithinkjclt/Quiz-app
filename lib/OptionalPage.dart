@@ -28,117 +28,154 @@ class Option extends StatelessWidget {
           shape: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black)),
         ),
-        body: Column(
-          children: [
-            const SizedBox(
-              height: 35,
-            ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen(optional: 0,)));
-                  },
-                  child: OptContainer(
-                    url:
-                        'https://media.istockphoto.com/id/542065210/vector/houseboat-on-kerala.jpg?s=612x612&w=0&k=20&c=wMhj8zsFQDRgz3UdiwdoMTLeVTvjPRNxM7Q3VpeL9G0=',
-                    text: 'Kerala ',
-                    color: Colors.green,
+        body: SingleChildScrollView(
+
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 35,
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen(optional: 1,)));
-                  },
-                  child: OptContainer(
-                    color: Colors.blue,
-                    text: "india ",
-                    url:
-                        "https://c8.alamy.com/comp/PY50B4/flag-of-india-vertical-flagisolated-on-a-white-background-PY50B4.jpg",
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                optional: 0,
+                              )));
+                    },
+                    child: OptContainer(
+                      url:
+                          'https://media.istockphoto.com/id/542065210/vector/houseboat-on-kerala.jpg?s=612x612&w=0&k=20&c=wMhj8zsFQDRgz3UdiwdoMTLeVTvjPRNxM7Q3VpeL9G0=',
+                      text: 'Kerala ',
+                      color: Colors.green,
+                    ),
                   ),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen(optional: 2,)));
-                  },
-                  child: OptContainer(
-                    url:
-                        'https://thumbs.dreamstime.com/b/sports-betting-concept-design-bookmaker-download-vertical-banner-sports-website-mobile-application-sports-betting-262944482.jpg',
-                    text: 'sports ',
-                    color: Colors.red,
+                  const SizedBox(
+                    width: 20,
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen(optional: 3,)));
-                  },
-                  child: OptContainer(
-                    color: Colors.yellow,
-                    text: "Birds ",
-                    url:
-                        "https://www.shutterstock.com/image-photo/greenwinged-macaw-ara-chloropterus-1-600nw-129934391.jpg",
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                optional: 1,
+                              )));
+                    },
+                    child: OptContainer(
+                      color: Colors.blue,
+                      text: "india ",
+                      url:
+                          "https://c8.alamy.com/comp/PY50B4/flag-of-india-vertical-flagisolated-on-a-white-background-PY50B4.jpg",
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
                   ),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                const SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen(optional: 4,)));
-                  },
-                  child: OptContainer(
-                    url:
-                        'https://media.istockphoto.com/id/140470565/photo/big-male-african-lion.jpg?s=612x612&w=0&k=20&c=DsuLvwrZmLbFvebc4t2kY8CtR5g2CP_dGAGmCUy-bgk=',
-                    text: 'Animal ',
-                    color: Colors.brown,
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                optional: 2,
+                              )));
+                    },
+                    child: OptContainer(
+                      url:
+                          'https://thumbs.dreamstime.com/b/sports-betting-concept-design-bookmaker-download-vertical-banner-sports-website-mobile-application-sports-betting-262944482.jpg',
+                      text: 'sports ',
+                      color: Colors.red,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const HomeScreen(optional: 5,)));
-                  },
-                  child: OptContainer(
-                    color: Colors.pinkAccent,
-                    text: "Cars ",
-                    url:
-                        "https://img.freepik.com/premium-photo/aggressive-bright-sports-car-vertical-perspective-spring_449226-128.jpg",
+                  const SizedBox(
+                    width: 20,
                   ),
-                )
-              ],
-            )
-          ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                optional: 3,
+                              )));
+                    },
+                    child: OptContainer(
+                      color: Colors.yellow,
+                      text: "Birds ",
+                      url:
+                          "https://www.shutterstock.com/image-photo/greenwinged-macaw-ara-chloropterus-1-600nw-129934391.jpg",
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                optional: 4,
+                              )));
+                    },
+                    child: OptContainer(
+                      url:
+                          'https://media.istockphoto.com/id/140470565/photo/big-male-african-lion.jpg?s=612x612&w=0&k=20&c=DsuLvwrZmLbFvebc4t2kY8CtR5g2CP_dGAGmCUy-bgk=',
+                      text: 'Animal ',
+                      color: Colors.brown,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                                optional: 5,
+                              )));
+                    },
+                    child: OptContainer(
+                      color: Colors.pinkAccent,
+                      text: "Cars ",
+                      url:
+                          "https://img.freepik.com/premium-photo/aggressive-bright-sports-car-vertical-perspective-spring_449226-128.jpg",
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const HomeScreen(
+                            optional: 6,
+                          )));
+                    },
+                    child: OptContainer(
+                      url:
+                      'https://media.istockphoto.com/id/1413840552/photo/old-clock-hanging-on-a-chain-on-the-background-of-old-books-lock-as-a-symbol-of-time-a-books.webp?b=1&s=170667a&w=0&k=20&c=XZnZnDLdsehHhlFlVvsQdpi4pJ7lWf9ggs8nkSfCiKI=',
+                      text: 'History ',
+                      color: Colors.grey,
+                    ),
+                  ),
+
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

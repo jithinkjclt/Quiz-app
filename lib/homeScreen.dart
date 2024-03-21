@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Data4 data4 = Data4();
   Data5 data5 = Data5();
   Data6 data6 = Data6();
+  Data7 data7 = Data7();
 
   submit() {
     flag++;
@@ -91,9 +92,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               ? data6.carQuizQuestions[flag]
                                       ["correctAnswerIndex"] ==
                                   index
-                              : data1.keralaquizQuestions[flag]
-                                      ["correctAnswerIndex"] ==
-                                  index) {
+                              : widget.optional == 6
+                                  ? data7.historyQuizQuestions[flag]
+                                          ["correctAnswerIndex"] ==
+                                      index
+                                  : data1.keralaquizQuestions[flag]
+                                          ["correctAnswerIndex"] ==
+                                      index) {
         clr = Colors.green;
         mark++;
       } else {
@@ -160,8 +165,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                           : widget.optional == 5
                                               ? data6.carQuizQuestions[flag]
                                                   ['question']
-                                              : data1.keralaquizQuestions[flag]
-                                                  ['question'],
+                                              : widget.optional == 6
+                                                  ? data7.historyQuizQuestions[flag]
+                                                      ['question']
+                                                  : data1.keralaquizQuestions[
+                                                      flag]['question'],
                       style: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),
@@ -217,10 +225,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       : widget.optional == 5
                                                           ? data6.carQuizQuestions[flag]
                                                               ['answers'][index]
-                                                          : data1.keralaquizQuestions[
+                                                          : widget.optional == 6
+                                                              ? data7.historyQuizQuestions[flag]
+                                                                      ['answers']
+                                                                  [index]
+                                                              : data1.keralaquizQuestions[
                                                                       flag]
-                                                                  ['answers']
-                                                              [index])
+                                                                  ['answers'][index])
                                 ],
                               ),
                             ),
